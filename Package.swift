@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.7
 
 /**
 *  Ink
@@ -10,6 +10,12 @@ import PackageDescription
 
 let package = Package(
     name: "Ink",
+    platforms: [
+        .macOS(.v10_15),
+        .iOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v9)
+    ],
     products: [
         .library(name: "Ink", targets: ["Ink"]),
         .executable(name: "ink-cli", targets: ["InkCLI"])
