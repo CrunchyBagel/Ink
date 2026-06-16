@@ -22,7 +22,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "Ink"),
-        .target(name: "InkCLI", dependencies: ["Ink"]),
+        .executableTarget(name: "InkCLI", dependencies: ["Ink"]),
         .testTarget(name: "InkTests", dependencies: ["Ink"])
     ]
 )
